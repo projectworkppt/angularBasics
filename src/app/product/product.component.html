@@ -1,0 +1,31 @@
+<b>------------- Product Details -------------</b>
+<!--<h1> {{getId()}}</h1>
+<h1> {{getName()}}</h1>
+<h1> {{getPrice()}}</h1>
+
+<div *ngFor="let product of products">
+    <h1>{{product.id}}</h1>
+    <h1>{{product.name}}</h1>
+</div>-->
+<div *ngFor="let product of getProducts()">
+    <b>{{product.id}} : </b>
+    <b>{{product.name}}</b>
+</div>
+<b>------------- Seller Details -------------</b><br/>
+<input type="button" value="Show-Hide" (click)="toggle()"/><br/>
+<app-seller ></app-seller>
+<br/>
+<b>------------- IF Condition -------------</b><br/>
+<app-if [hidden]="hide"></app-if>
+<br/>
+<b>------------- Switch Case -------------</b><br/>
+<app-switch  [hidden]="hide"></app-switch>
+<br/>
+<b>------------- For Loop -------------</b><br/>
+<app-for  [hidden]="hide"></app-for>
+<br/>
+<b>------------- Countries Data Call web service -------------</b><br/>
+<app-countries></app-countries>
+<br/>
+<b>------------- Convert TO Uppercas post data to web service -------------</b><br/>
+<app-uppercase-converter></app-uppercase-converter>
